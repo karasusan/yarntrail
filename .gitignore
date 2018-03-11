@@ -1,0 +1,7 @@
+*.tx
+*.swatch
+*.swatches
+**/._*
+autosave/**
+images/**
+movies/**

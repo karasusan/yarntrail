@@ -1,0 +1,27 @@
+// Autodesk Maya 2017 Update 5 
+// YarnTrailConstraintController.mel
+
+
+YarnTrailCtrl.Angle = -YarnTrailCtrl.rotateX;
+
+$cvAngle = YarnTrailCtrl.CvAngle;
+
+$cvCount = YarnTrailCtrl.CvCount;
+
+$trailAngle = YarnTrailCtrl.Angle + YarnTrailCtrl.InitialAngle;
+
+YarnTrailCtrl.TrailAngle = $trailAngle;
+
+$count = $trailAngle / $cvAngle;
+
+for($i = 0; $i < $cvCount; $i++)
+{
+    int $number = $i + 1;
+    string $dynamicContraintShape = "dynamicConstraintShape" + $number;
+    string $parentContraintWeight = "dynamicConstraint" + $number + "_parentConstraint1.YarnTrailParentW0";
+    
+    $enableConstraint = $i < $count ? 0 : 1;
+
+    setAttr($dynamicContraintShape + ".enable", $enableConstraint);
+    setAttr($parentContraintWeight, $enableConstraint);
+}

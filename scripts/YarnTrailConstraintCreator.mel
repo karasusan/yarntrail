@@ -1,0 +1,28 @@
+// Autodesk Maya 2017 Update 5 
+// YarnTrailConstraintCreator.mel
+
+$select = `ls -sl`;
+$parent = $select[0]; 
+
+for($i = 0; $i <= 202; $i++)
+{
+    // create dynamic constraint
+    selectKey -clear ;
+    select -r curve1.cv[$i];
+    createNConstraint transform 0;
+
+    // create parent constraint
+    $number = $i + 1;
+    $constraint = "dynamicConstraint" + $number;
+    select -cl;
+    select -r $parent;
+    select -add $constraint;
+    doCreateParentConstraintArgList 1 { "0","0","0","0","0","0","0","0","1","","1" };
+    parentConstraint -mo -weight 1;
+
+    // disable rest position
+    $parentConstraintName = $constraint + "_parentConstraint1";
+    string $enableRestPositionName = $parentConstraintName + ".enableRestPosition";
+    select -r $parentConstraintName;
+    setAttr $enableRestPositionName 0;
+}
