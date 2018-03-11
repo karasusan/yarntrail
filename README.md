@@ -2,6 +2,10 @@
 
 This maya project is technical tutorial for yarn trail dynamics.
 
+## Tutorial (Written in Japanese)
+
+https://qiita.com/Qiita/items/d9e5fa1ef10b2df50e56
+
 ## Rendering image
 
 ![demo](https://raw.github.com/wiki/karasusan/yarntrail/media/YarnTrailDynamicsRendering.gif)
@@ -9,7 +13,3 @@ This maya project is technical tutorial for yarn trail dynamics.
 ## Preview image
 
 ![demo](https://raw.github.com/wiki/karasusan/yarntrail/media/YarnTrailDynamicsRig.gif)
-
-## Tutorial (Written in Japanese)
-
-https://qiita.com/Qiita/items/d9e5fa1ef10b2df50e56
