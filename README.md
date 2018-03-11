@@ -1,2 +1,4 @@
 # yarntrail
-Maya sample project for yarn trail. 
+
+https://raw.github.com/wiki/karasusan/yarntrail/media/YarnTrailDynamicsRendering.gif
+
